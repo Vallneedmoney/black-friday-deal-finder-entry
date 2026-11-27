@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FridayProof — Black Friday deals, checked by hand</title>
+<meta name="description" content="Twelve real Black Friday 2026 deals, each price-checked on 27 Nov 2026 at its store, with an honest verdict on whether it is really a deal.">
+<link rel="stylesheet" href="style.css">
+<script type="module" src="main.js"></script>
+</head>
+<body>
+<header class="masthead">
+  <div class="wrap">
+    <p class="kicker">Black Friday · 27 Nov 2026 · Cyber Monday coming</p>
+    <h1>Friday<span>Proof</span></h1>
+    <p class="tagline">Every deal checked. Every price proven. No inflated “was” prices, no guesses — if we could not verify a price at the store, the deal is not on this page.</p>
+    <dl class="stats">
+      <div><dt>Deals checked</dt><dd id="stat-deals">–</dd></div>
+      <div><dt>Stores</dt><dd id="stat-stores">–</dd></div>
+      <div><dt>Average cut</dt><dd id="stat-avg">–</dd></div>
+      <div><dt>Real deals</dt><dd id="stat-real">–</dd></div>
+      <div><dt>Total you could save</dt><dd id="stat-saved">–</dd></div>
+    </dl>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="controls" aria-label="Find a deal">
+    <div class="row">
+      <label class="search">
+        <span class="sr">Search deals</span>
+        <input id="q" type="search" placeholder="Search a product, brand or store…" autocomplete="off">
+      </label>
+      <label>Store
+        <select id="store"></select>
+      </label>
+      <label>Discount
+        <select id="min"></select>
+      </label>
+      <label>Verdict
+        <select id="verdict"></select>
+      </label>
+      <label>Sort
+        <select id="sort"></select>
+      </label>
+      <button id="reset" type="button">Reset</button>
+    </div>
+    <div id="cat-chips" class="chips" role="group" aria-label="Category"></div>
+    <p id="result-count" class="count" aria-live="polite"></p>
+  </section>
+
+  <section id="grid" class="grid" aria-label="Deals"></section>
+
+  <section class="method">
+    <h2>How we judge “is it really a deal?”</h2>
+    <ul>
+      <li><span class="verdict verdict-real">REAL DEAL</span> — a genuine steal: 40% or more off, or the lowest price we can point at. Eight of the twelve deals here earn this.</li>
+      <li><span class="verdict verdict-strong">STRONG PRICE</span> — a solid saving of 20–39% on a real list price. Worth buying if you wanted it anyway.</li>
+      <li><span class="verdict verdict-modest">MODEST CUT</span> — a real cut under 20%. Honest, but no reason to rush. Only one deal here lands here — the Switch 2 bundle, whose first-ever $50 cut mostly just makes the game free.</li>
+    </ul>
+    <p>Each card names its source and the hour its price was read. “Was” prices are the store’s own list or comparable value, never a number we made up. Prices move all day on Black Friday — always re-check at checkout before you pay.</p>
+  </section>
+</main>
+
+<footer class="wrap">
+  <p id="checked-note"></p>
+  <p>FridayProof is an independent deal ledger, not affiliated with Amazon, Best Buy, Walmart or any brand on this page. Store names and product names belong to their owners; links go to the store’s own product page.</p>
+</footer>
+</body>
+</html>
